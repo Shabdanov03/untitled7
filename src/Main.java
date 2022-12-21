@@ -17,7 +17,7 @@ public class Main {
         List<Person> people = List.of(
                 new Person(1L, "Ilim", (byte) 19, Gender.MALE),
                 new Person(2L, "Nuradil", (byte) 18, Gender.MALE),
-                new Person(3L, "Dasatan", (byte) 20, Gender.FEMALE));
+                new Person(3L, "Dastan", (byte) 20, Gender.FEMALE));
 
         List<Animal> animals = List.of(
                 new Animal(6L, "Cat", (byte) 3, Gender.FEMALE),
@@ -65,6 +65,7 @@ public class Main {
                     String name = new Scanner(System.in).nextLine();
                     System.out.println(personService.removeByName(name));
                 }
+                case 8 -> System.out.println(animalService.add(animals));
                 case 9 -> {
                     System.out.println("Enter by id: ");
                     Long id = new Scanner(System.in).nextLong();

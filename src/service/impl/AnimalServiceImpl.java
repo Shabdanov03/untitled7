@@ -20,7 +20,11 @@ public class AnimalServiceImpl implements GenericService<Animal> {
 
     @Override
     public Animal getById(Long id) {
-        return (Animal) animals.getAnimals().stream().filter(x->x.getId().equals(id));
+        List<Animal> animals1 = animals.getAnimals().stream().filter(x -> x.getId().equals(id)).toList();
+        for (Animal animal : animals1) {
+            return animal;
+        }
+        return null;
     }
 
     @Override

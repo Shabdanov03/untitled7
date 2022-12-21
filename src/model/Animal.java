@@ -8,6 +8,10 @@ public class Animal {
     private byte age;
     private Gender gender;
 
+    public Animal(){
+
+    }
+
     public Animal(Long id, String name, byte age, Gender gender) {
         this.id = id;
         this.name = name;

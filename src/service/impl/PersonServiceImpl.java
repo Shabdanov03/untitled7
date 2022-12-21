@@ -22,11 +22,11 @@ public class PersonServiceImpl implements GenericService<Person> {
 
     @Override
     public Person getById(Long id) {
-        for (Person user : person.getUsers()) {
-            if (user.getId().equals(id)){
-                System.out.println(user);
-            }
-        }return null;
+        List<Person> people = person.getUsers().stream().filter(x -> x.getId().equals(id)).toList();
+        for (Person person1 : people) {
+            return person1;
+        }
+        return null;
     }
 
     @Override
